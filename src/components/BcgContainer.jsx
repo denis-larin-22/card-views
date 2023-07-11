@@ -1,7 +1,6 @@
 import '../styles/App.css';
 
 import ReactPlayer from 'react-player';
-import { CardList } from './card/CardList';
 import { connect } from 'react-redux';
 import { useState } from 'react';
 
@@ -26,11 +25,7 @@ const BcgContainerView = ({ currentBcg, list }) => {
             />
             <button className='hide-button' onClick={() => setIsVisible(!isVisible)}>{isVisible ? 'hide list' : 'show list'}</button>
             <div className="content">
-                <header className='header'>
-                    <h1>{currentBcg.name}</h1>
-                    <h2>{currentBcg.text}</h2>
-                </header>
-                {isVisible && <CardList list={list} />}
+
             </div>
         </div>
     )
