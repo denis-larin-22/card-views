@@ -1,16 +1,12 @@
 import '../styles/App.css';
 
 import ReactPlayer from 'react-player';
-import { connect } from 'react-redux';
-import { useState } from 'react';
 
-const BcgContainerView = ({ currentBcg, list }) => {
-    const [isVisible, setIsVisible] = useState(true);
-
+export const BcgContainer = () => {
     return (
         <div className="video-background">
             <ReactPlayer
-                url={currentBcg.bcgUrl}
+                url={null}
                 playing
                 loop
                 muted
@@ -23,17 +19,9 @@ const BcgContainerView = ({ currentBcg, list }) => {
                     zIndex: '-1',
                 }}
             />
-            <button className='hide-button' onClick={() => setIsVisible(!isVisible)}>{isVisible ? 'hide list' : 'show list'}</button>
             <div className="content">
 
             </div>
         </div>
     )
 }
-
-const mapStateToProps = (state) => ({
-    currentBcg: state.background.currentBcg,
-    list: state.background.bcgList
-})
-
-export const BcgContainer = connect(mapStateToProps)(BcgContainerView); 
