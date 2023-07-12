@@ -19,7 +19,7 @@ export const BcgContainer = () => {
     };
 
     return (
-        <div className="relative w-screen h-screen overflow-hidden">
+        <div className="relative w-screen h-screen overflow-hidden bg-black z-[10]">
             <audio ref={audioRef} loop src={assets.bcgAudio} className=''></audio>
             {isPlayingBcg ?
                 <ReactPlayer
