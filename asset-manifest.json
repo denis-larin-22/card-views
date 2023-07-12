@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/card-views/static/css/main.25a05f43.css",
+    "main.js": "/card-views/static/js/main.ce8a1324.js",
+    "index.html": "/card-views/index.html",
+    "main.25a05f43.css.map": "/card-views/static/css/main.25a05f43.css.map",
+    "main.ce8a1324.js.map": "/card-views/static/js/main.ce8a1324.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.25a05f43.css",
+    "static/js/main.ce8a1324.js"
+  ]
+}
