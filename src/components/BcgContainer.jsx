@@ -1,26 +1,26 @@
-import '../styles/App.css';
-
 import ReactPlayer from 'react-player';
+import { Card } from './Card';
 
 export const BcgContainer = () => {
+    const assets = {
+        bcgVideo: process.env.PUBLIC_URL + '/assets/media/video/space-bcg.mp4',
+        bcgAudio: process.env.PUBLIC_URL + '/assets/media/audio/interstellar-Day_One.mp3'
+    }
+
     return (
-        <div className="video-background">
+        <div className="relative w-screen h-screen overflow-hidden">
+            <audio controls playing={true} src={assets.bcgAudio}>asdfgh</audio>
             <ReactPlayer
-                url={null}
-                playing
+                url={assets.bcgVideo}
+                playing={true}
                 loop
                 muted
                 width="100%"
                 height="100%"
-                style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    zIndex: '-1',
-                }}
+                className='absolute top-0 left-0 z-[-1] video-background'
             />
-            <div className="content">
-
+            <div className="container content flex items-center justify-center">
+                <Card />
             </div>
         </div>
     )
