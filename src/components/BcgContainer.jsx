@@ -4,6 +4,7 @@ import { useRef, useState } from 'react';
 
 export const BcgContainer = () => {
     const assets = {
+        bcgImage: process.env.PUBLIC_URL + '/assets/images/bcg-image.jpg',
         bcgVideo: process.env.PUBLIC_URL + '/assets/media/video/space-bcg.mp4',
         bcgAudio: process.env.PUBLIC_URL + '/assets/media/audio/interstellar-Day_One.mp3'
     };
@@ -20,18 +21,23 @@ export const BcgContainer = () => {
     return (
         <div className="relative w-screen h-screen overflow-hidden">
             <audio ref={audioRef} loop src={assets.bcgAudio} className=''></audio>
-            <ReactPlayer
-                url={assets.bcgVideo}
-                playing={isPlayingBcg}
-                loop
-                muted
-                width="100%"
-                height="100%"
-                className='absolute top-0 left-0 z-[-1] video-background'
-            />
-            <div className="container flex items-center justify-center content">
+            {isPlayingBcg ?
+                <ReactPlayer
+                    url={assets.bcgVideo}
+                    playing
+                    loop
+                    muted
+                    width="100%"
+                    height="100%"
+                    className='absolute top-0 left-0 z-[-1] video-background'
+                />
+                :
+                <div className="w-[100%] h-[100%] absolute top-0 left-0 z-[-1] image-background"></div>
+            }
+
+            <main className="container flex items-center justify-center content">
                 <Card isPlayingAudio={isPlayingAudio} toggleAudio={togglePlayAudio} isPlayingBcg={isPlayingBcg} toggleBcg={() => setIsPlayingBcg(!isPlayingBcg)} />
-            </div>
+            </main>
         </div>
     )
 }

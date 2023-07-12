@@ -20,6 +20,11 @@ code {
   .video-background video {
     @apply object-cover;
   }
+
+  .image-background {
+    background-image: url('../../public/assets/images/bcg-image.jpg');
+  }
+
   .content {
     position: absolute;
     top: 50%;
