@@ -1,9 +1,5 @@
-import { useState } from "react";
-
 /* eslint-disable jsx-a11y/anchor-is-valid */
-export const Card = () => {
-    const [isPaused, setIsPaused] = useState(false);
-    const [isPlayed, setIsPlayed] = useState(false);
+export const Card = ({ isPlayingBcg, toggleBcg, isPlayingAudio, toggleAudio }) => {
 
     const imagePath = process.env.PUBLIC_URL + '/assets/images/card-img.png';
     const iconClose = process.env.PUBLIC_URL + '/assets/images/card-icons/Close.svg';
@@ -13,17 +9,17 @@ export const Card = () => {
     return (
         <div className="relative max-w-[960px] p-[24px] flex flex-col gap-[21px] backdrop-blur-xl border-[2px] border-white-0.2 rounded-[32px] text-white-0.6" >
             <div className="flex items-center justify-center">
-                <button className="absolute top-[24px] left-[24px] p-[15px] bg-white-0.1 rounded-[99px] ease-in duration-300 hover:bg-white-0.6">
+                <button className="absolute top-[15px] left-[15px] p-[10px] md:top-[24px] md:left-[24px] md:p-[15px] bg-white-0.1 rounded-[99px] ease-in duration-300 hover:bg-white-0.6">
                     <img src={iconClose} alt="icon-close" />
                 </button>
-                <nav className="text-cardNav">
+                <nav className="mt-[30px] text-cardNav-sm md:text-cardNav-md">
                     <button className="px-[24px] py-[12px] rounded-[99px] ease-in duration-300 hover:bg-white-0.2 hover:text-white btn-active">Info</button>
                     <button className="px-[24px] py-[12px] rounded-[99px] ease-in duration-300 hover:bg-white-0.2 hover:text-white">Chapters</button>
                     <button className="px-[24px] py-[12px] rounded-[99px] ease-in duration-300 hover:bg-white-0.2 hover:text-white">Up Next</button>
                 </nav>
             </div>
 
-            <div className="flex items-center gap-[21px]">
+            <div className="flex flex-col md:flex-row items-center gap-[21px]">
                 <img src={imagePath} alt="card-img" className="rounded-[18px]" />
 
                 <div className="max-w-[354px] text-cardText">
@@ -36,16 +32,16 @@ export const Card = () => {
                 <div className="min-w-[251px] flex flex-col gap-y-[12px] text-cardBtn text-white">
                     <button
                         className="flex items-center gap-x-[12px] px-[32px] py-[18px] rounded-[18px] italic bg-white-0.2 ease-in duration-300 hover:bg-white-0.6 hover:text-black active:scale-90"
-                        onClick={() => setIsPaused(!isPaused)}
+                        onClick={toggleAudio}
                     >
-                        <img src={isPaused ? iconPause : iconPlay} alt="icon-play" className="w-[15px] h-[16px]" />
+                        <img src={isPlayingAudio ? iconPause : iconPlay} alt="icon-play" className="w-[15px] h-[16px]" />
                         From Beginning
                     </button>
                     <button
                         className="px-[32px] py-[18px] rounded-[18px] italic bg-white-0.2 ease-in duration-300 hover:bg-white-0.6 hover:text-black active:scale-90"
-                        onClick={() => setIsPlayed(!isPlayed)}
+                        onClick={toggleBcg}
                     >
-                        {isPlayed ? 'Stop playing' : 'Go to Series'}
+                        {isPlayingBcg ? 'Stop playing' : 'Go to Series'}
                     </button>
                 </div>
             </div>

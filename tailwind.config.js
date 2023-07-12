@@ -26,7 +26,8 @@ module.exports = {
     },
     fontSize: {
       cardText: ['17px', '22px'],
-      cardNav: ['17px', '23px'],
+      'cardNav-md': ['17px', '23px'],
+      'cardNav-sm': ['13px', '15px'],
       cardBtn: ['20px', '22px'],
     },
   },

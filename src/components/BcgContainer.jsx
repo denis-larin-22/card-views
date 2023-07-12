@@ -1,5 +1,6 @@
 import ReactPlayer from 'react-player';
 import { Card } from './Card';
+import { useRef, useState } from 'react';
 
 export const BcgContainer = () => {
     const assets = {
@@ -7,12 +8,21 @@ export const BcgContainer = () => {
         bcgAudio: process.env.PUBLIC_URL + '/assets/media/audio/interstellar-Day_One.mp3'
     }
 
+    const [isPlayingBcg, setIsPlayingBcg] = useState(false);
+    const [isPlayingAudio, setIsPlayingAudio] = useState(false);
+    const audioRef = useRef(null);
+
+    const togglePlayAudio = () => {
+        isPlayingAudio ? audioRef.current.pause() : audioRef.current.play();
+        setIsPlayingAudio(!isPlayingAudio);
+    };
+
     return (
         <div className="relative w-screen h-screen overflow-hidden">
-            <audio controls playing={true} src={assets.bcgAudio}>asdfgh</audio>
+            <audio ref={audioRef} loop src={assets.bcgAudio} className=''></audio>
             <ReactPlayer
                 url={assets.bcgVideo}
-                playing={true}
+                playing={isPlayingBcg}
                 loop
                 muted
                 width="100%"
@@ -20,7 +30,7 @@ export const BcgContainer = () => {
                 className='absolute top-0 left-0 z-[-1] video-background'
             />
             <div className="container content flex items-center justify-center">
-                <Card />
+                <Card isPlayingAudio={isPlayingAudio} toggleAudio={togglePlayAudio} isPlayingBcg={isPlayingBcg} toggleBcg={() => setIsPlayingBcg(!isPlayingBcg)} />
             </div>
         </div>
     )
