@@ -6,7 +6,7 @@ export const BcgContainer = () => {
     const assets = {
         bcgVideo: process.env.PUBLIC_URL + '/assets/media/video/space-bcg.mp4',
         bcgAudio: process.env.PUBLIC_URL + '/assets/media/audio/interstellar-Day_One.mp3'
-    }
+    };
 
     const [isPlayingBcg, setIsPlayingBcg] = useState(false);
     const [isPlayingAudio, setIsPlayingAudio] = useState(false);
@@ -29,7 +29,7 @@ export const BcgContainer = () => {
                 height="100%"
                 className='absolute top-0 left-0 z-[-1] video-background'
             />
-            <div className="container content flex items-center justify-center">
+            <div className="container flex items-center justify-center content">
                 <Card isPlayingAudio={isPlayingAudio} toggleAudio={togglePlayAudio} isPlayingBcg={isPlayingBcg} toggleBcg={() => setIsPlayingBcg(!isPlayingBcg)} />
             </div>
         </div>

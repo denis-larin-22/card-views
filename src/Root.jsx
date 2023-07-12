@@ -1,6 +1,6 @@
-
-import { BcgContainer } from './components/BcgContainer';
 import './styles/App.css';
+
+import { BcgContainer } from './components';
 
 function Root() {
   return (
