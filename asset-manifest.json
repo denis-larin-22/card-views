@@ -1,14 +1,13 @@
 {
   "files": {
-    "main.css": "/card-views/static/css/main.202a27af.css",
-    "main.js": "/card-views/static/js/main.2fb75982.js",
-    "static/media/bcg-image.jpg": "/card-views/static/media/bcg-image.0626041152f843981d09.jpg",
+    "main.css": "/card-views/static/css/main.1cb998ae.css",
+    "main.js": "/card-views/static/js/main.9dacf231.js",
     "index.html": "/card-views/index.html",
-    "main.202a27af.css.map": "/card-views/static/css/main.202a27af.css.map",
-    "main.2fb75982.js.map": "/card-views/static/js/main.2fb75982.js.map"
+    "main.1cb998ae.css.map": "/card-views/static/css/main.1cb998ae.css.map",
+    "main.9dacf231.js.map": "/card-views/static/js/main.9dacf231.js.map"
   },
   "entrypoints": [
-    "static/css/main.202a27af.css",
-    "static/js/main.2fb75982.js"
+    "static/css/main.1cb998ae.css",
+    "static/js/main.9dacf231.js"
   ]
 }
