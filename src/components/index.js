@@ -1,2 +1,2 @@
-export * from './BcgContainer';
+export * from './CardPage';
 export * from './Card';

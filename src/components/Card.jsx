@@ -1,9 +1,11 @@
+import { getFromPublic } from "../_utils/getFromPublic"
+
 export const Card = ({ isPlayingBcg, toggleBcg, isPlayingAudio, toggleAudio }) => {
     const assets = {
-        imagePath: process.env.PUBLIC_URL + '/assets/images/card-img.png',
-        iconClose: process.env.PUBLIC_URL + '/assets/images/card-icons/Close.svg',
-        iconPlay: process.env.PUBLIC_URL + '/assets/images/card-icons/Play.svg',
-        iconPause: process.env.PUBLIC_URL + '/assets/images/card-icons/Pause.png',
+        cardImage: getFromPublic('/assets/images/card-img.png'),
+        iconClose: getFromPublic('/assets/images/card-icons/Close.svg'),
+        iconPlay: getFromPublic('/assets/images/card-icons/Play.svg'),
+        iconPause: getFromPublic('/assets/images/card-icons/Pause.png'),
     }
 
     return (
@@ -20,7 +22,7 @@ export const Card = ({ isPlayingBcg, toggleBcg, isPlayingAudio, toggleAudio }) =
             </div>
 
             <div className="flex flex-col md:flex-row items-center gap-[21px]">
-                <img src={assets.imagePath} alt="card-img" className="rounded-[18px]" />
+                <img src={assets.cardImage} alt="card-img" className="rounded-[18px]" />
                 <div className="max-w-[354px] text-cardText">
                     <h4 className="pb-[5px] text-[17px] leading-[23px] tracking-[0.17px] text-white  italic">Astonishing</h4>
                     <p className="pb-[5px]">Travel back 66 million years to when majestic
@@ -46,4 +48,4 @@ export const Card = ({ isPlayingBcg, toggleBcg, isPlayingAudio, toggleAudio }) =
             </div>
         </div>
     )
-}
+};

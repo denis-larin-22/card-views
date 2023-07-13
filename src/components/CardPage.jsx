@@ -1,12 +1,13 @@
 import ReactPlayer from 'react-player';
-import { Card } from './Card';
 import { useRef, useState } from 'react';
+import { Card } from './Card';
+import { getFromPublic } from '../_utils/getFromPublic';
 
-export const BcgContainer = () => {
+export const CardPage = () => {
     const assets = {
-        bcgImage: process.env.PUBLIC_URL + '/assets/images/bcg-image.jpg',
-        bcgVideo: process.env.PUBLIC_URL + '/assets/media/video/space-bcg.mp4',
-        bcgAudio: process.env.PUBLIC_URL + '/assets/media/audio/interstellar-Day_One.mp3'
+        bcgImage: getFromPublic('/assets/images/bcg-image.jpg'),
+        bcgVideo: getFromPublic('/assets/media/video/space-bcg.mp4'),
+        bcgAudio: getFromPublic('/assets/media/audio/interstellar-Day_One.mp3')
     };
 
     const [isPlayingBcg, setIsPlayingBcg] = useState(false);
@@ -21,23 +22,20 @@ export const BcgContainer = () => {
     return (
         <div className="relative w-screen h-screen overflow-hidden bg-black z-[10]">
             <audio ref={audioRef} loop src={assets.bcgAudio} className=''></audio>
-            {isPlayingBcg ?
-                <ReactPlayer
-                    url={assets.bcgVideo}
-                    playing
-                    loop
-                    muted
-                    width="100%"
-                    height="100%"
-                    className='absolute top-0 left-0 z-[-1] video-background'
-                />
-                :
-                <div className="w-[100%] h-[100%] absolute top-0 left-0 z-[-1] image-background"></div>
-            }
+            <ReactPlayer
+                url={assets.bcgVideo}
+                playing={isPlayingBcg}
+                loop
+                muted
+                width="100%"
+                height="100%"
+                className='absolute top-0 left-0 z-[-1] video-background'
+            />
+            {isPlayingBcg ? null : <img src={assets.bcgImage} alt="default-background" className="w-[100%] h-[100%] absolute top-0 left-0 z-[-1] object-cover" />}
 
             <main className="container flex items-center justify-center content">
                 <Card isPlayingAudio={isPlayingAudio} toggleAudio={togglePlayAudio} isPlayingBcg={isPlayingBcg} toggleBcg={() => setIsPlayingBcg(!isPlayingBcg)} />
             </main>
         </div>
     )
-}
+};
