@@ -12,7 +12,10 @@ module.exports = {
       },
       transitionTimingFunction: {
         'transition-slow':  'transition: ease 1s'
-      }
+      },
+      screens: {
+        md: '940px'
+      },
     },
     container: {
       center: true,

@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import { bcgReducer } from "./bcgReducer/bcgReducer";
+import { cardSetReducer } from "./cardSetReduser";
 
 export const rootReducer = combineReducers({
-    background: bcgReducer 
+    cardSetReducer: cardSetReducer,
 })
