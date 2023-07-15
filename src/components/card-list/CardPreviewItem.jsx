@@ -16,7 +16,7 @@ export const CardPreviewItem = ({ cardItem, setCurrentHandler }) => {
             </div>
             <Link
                 onClick={setCurrentHandler}
-                to={'/card-page'}
+                to={'/card-item'}
                 className="flex items-center gap-x-[12px] px-[25px] py-[12px] rounded-[18px] italic bg-white-0.2 ease-in duration-300 hover:bg-white-0.6 hover:text-black active:scale-90"
             >
                 <img src={assets.iconPlay} alt="icon-play" className="w-[15px] h-[16px]" />

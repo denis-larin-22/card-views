@@ -1,15 +1,15 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 
 import Root from "../Root";
 import { CardPage } from "../components/CardPage";
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
     {
         path: "/",
         element: <Root/>
     },
     {
-        path: "/card-page",
+        path: "/card-item",
         element: <CardPage/>,
     },
 ])
