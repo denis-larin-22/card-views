@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/card-views/static/css/main.612ec548.css",
-    "main.js": "/card-views/static/js/main.d8fa099f.js",
+    "main.js": "/card-views/static/js/main.ba5832f6.js",
     "static/media/mountains-bcg.png": "/card-views/static/media/mountains-bcg.d449462a8cdbbddf4bd0.png",
     "index.html": "/card-views/index.html",
     "main.612ec548.css.map": "/card-views/static/css/main.612ec548.css.map",
-    "main.d8fa099f.js.map": "/card-views/static/js/main.d8fa099f.js.map"
+    "main.ba5832f6.js.map": "/card-views/static/js/main.ba5832f6.js.map"
   },
   "entrypoints": [
     "static/css/main.612ec548.css",
-    "static/js/main.d8fa099f.js"
+    "static/js/main.ba5832f6.js"
   ]
 }
