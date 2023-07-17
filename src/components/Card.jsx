@@ -12,7 +12,7 @@ export const Card = ({ isVisibleHandler, cardTheme, isPlayingBcg, toggleBcg, isP
     const { title, text, description, previeImage } = cardTheme;
 
     return (
-        <div className="relative max-w-[960px] p-[24px] flex flex-col gap-[21px] border-[2px] border-white-0.2 rounded-[32px] text-white-0.6">
+        <div className="relative max-w-[960px] p-[24px] flex flex-col gap-[21px]  text-white-0.6">
             <div className="flex items-center justify-center">
                 <div className="flex gap-x-[5px] absolute top-[15px] left-[15px] md:top-[24px] md:left-[24px] ">
                     <Link

@@ -9,13 +9,8 @@ export const CardPreviewItem = ({ cardItem, setCurrentHandler }) => {
     }
 
     return (
-        <motion.div
-            className="flex flex-col items-center justify-center"
-            initial={{ opacity: 0, y: '-35px' }}
-            animate={{ opacity: 1, y: '0' }}
-            transition={{ duration: 1.5 }}
-        >
-            <img src={cardItem.previeImage} alt="" className="w-[138px] h-[77px] rounded-[9px]" />
+        <motion.div className="flex flex-col items-center justify-center" >
+            <img src={cardItem.previeImage} alt="" className="w-[100%] object-cover md:w-[138px] h-[77px] rounded-[9px]" />
             <div className="">
                 <h4 className="w-[135px] pt-[20px] pb-[5px] text-[15px] leading-[22px] tracking-[0.17px] text-white  italic">{cardItem.title}</h4>
                 <p className="pb-[13px] text-[12px] leading-[22px] tracking-[0.17px]">{cardItem.previeText}</p>
