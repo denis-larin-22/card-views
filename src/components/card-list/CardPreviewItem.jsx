@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom"
-import { getFromPublic } from "../../_utils/getFromPublic"
+import { Link } from "react-router-dom";
+import { getFromPublic } from "../../_utils/getFromPublic";
+import { motion } from "framer-motion";
 
 export const CardPreviewItem = ({ cardItem, setCurrentHandler }) => {
     const assets = {
@@ -8,7 +9,12 @@ export const CardPreviewItem = ({ cardItem, setCurrentHandler }) => {
     }
 
     return (
-        <div className="flex flex-col items-center justify-center max-w-[219px] min-h-[263px] pt-[26px] pb-[16px] px-[40px] backdrop-blur-xl border-[2px] border-white-0.2 rounded-[32px]  ease-in duration-100 text-white-0.6 hover:scale-[1.05]">
+        <motion.div
+            className="flex flex-col items-center justify-center"
+            initial={{ opacity: 0, y: '-35px' }}
+            animate={{ opacity: 1, y: '0' }}
+            transition={{ duration: 1.5 }}
+        >
             <img src={cardItem.previeImage} alt="" className="w-[138px] h-[77px] rounded-[9px]" />
             <div className="">
                 <h4 className="w-[135px] pt-[20px] pb-[5px] text-[15px] leading-[22px] tracking-[0.17px] text-white  italic">{cardItem.title}</h4>
@@ -22,6 +28,6 @@ export const CardPreviewItem = ({ cardItem, setCurrentHandler }) => {
                 <img src={assets.iconPlay} alt="icon-play" className="w-[15px] h-[16px]" />
                 start
             </Link>
-        </div>
+        </motion.div>
     )
 }

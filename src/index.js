@@ -12,7 +12,6 @@ root.render(
   <React.StrictMode>
     <ReduxProvider store={store}>
       <RouterProvider router={router}/>
-      {/* <Framer/> */}
     </ReduxProvider>
   </React.StrictMode>
 );
