@@ -12,7 +12,15 @@ root.render(
   <React.StrictMode>
     <ReduxProvider store={store}>
       <RouterProvider router={router}/>
+      {/* <Framer/> */}
     </ReduxProvider>
   </React.StrictMode>
 );
 
+
+// пофиксить адаптив 
+// почистить код 
+// заполнить карточки нормальной инфой
+// доделать функционал кнопки up next в карточке 
+// раскидать компоненты по папкам
+// добавить анимацию при переходах
