@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { getFromPublic } from "../_utils/getFromPublic"
+import { connect } from "react-redux";
 
-export const Card = ({ isVisibleHandler, cardTheme, isPlayingBcg, toggleBcg, isPlayingAudio, toggleAudio }) => {
+const CardView = ({ isVisibleHandler, cardTheme, isPlayingBcg, toggleBcg, isPlayingAudio, toggleAudio, upNext }) => {
     const assets = {
         iconClose: getFromPublic('/assets/images/card-icons/Close.svg'),
         iconHide: getFromPublic('/assets/images/card-icons/Hide.png'),
@@ -32,7 +33,7 @@ export const Card = ({ isVisibleHandler, cardTheme, isPlayingBcg, toggleBcg, isP
                 <nav className="flex gap-[3px] mt-[30px] md:mt-0 text-cardNav-sm md:text-cardNav-md">
                     <button className="px-[24px] py-[12px] rounded-[99px] ease-in duration-300 hover:bg-white-0.2 hover:text-white btn-active">Info</button>
                     <button className="px-[24px] py-[12px] rounded-[99px] ease-in duration-300 hover:bg-white-0.2 hover:text-white">Chapters</button>
-                    <button className="px-[24px] py-[12px] rounded-[99px] ease-in duration-300 hover:bg-white-0.2 hover:text-white">Up Next</button>
+                    <button className="px-[24px] py-[12px] rounded-[99px] ease-in duration-300 hover:bg-white-0.2 hover:text-white" onClick={upNext}>Up Next</button>
                 </nav>
             </div>
 
@@ -62,3 +63,9 @@ export const Card = ({ isVisibleHandler, cardTheme, isPlayingBcg, toggleBcg, isP
         </div>
     )
 };
+
+const mapDispatchToProps = (dispatch) => ({
+    upNext: () => dispatch({ type: 'UP_NEXT' })
+})
+
+export const Card = connect(null, mapDispatchToProps)(CardView) 

@@ -74,6 +74,14 @@ export const cardSetReducer = (state = initState, action) => {
                 currentTheme: action.payload
             }
 
+        case 'UP_NEXT': 
+            
+
+            return {
+                ...state,
+                // currentTheme: nextTheme
+            }; 
+
         default: 
             return state;
     }
