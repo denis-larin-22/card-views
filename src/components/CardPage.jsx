@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { getFromPublic } from '../_utils/getFromPublic';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const CardPageView = ({ currentTheme }) => {
+const CardPageView = ({ currentTheme, listThemes }) => {
     const showIcon = getFromPublic('/assets/images/card-icons/Open.png');
 
     const { bcgImage, bcgVideo, audio, ...cardTheme } = currentTheme;
@@ -62,6 +62,7 @@ const CardPageView = ({ currentTheme }) => {
                             <Card
                                 isVisibleHandler={() => setIsVisibleCard(!isVisibleCard)}
                                 cardTheme={cardTheme}
+                                listThemes={listThemes}
                                 isPlayingAudio={isPlayingAudio}
                                 toggleAudio={togglePlayAudio}
                                 isPlayingBcg={isPlayingBcg}
@@ -87,7 +88,8 @@ const CardPageView = ({ currentTheme }) => {
 };
 
 const mapStateToProps = (state) => ({
-    currentTheme: state.cardSetReducer.currentTheme
+    currentTheme: state.cardSetReducer.currentTheme,
+    listThemes: state.cardSetReducer.listTheme,
 })
 
 export const CardPage = connect(mapStateToProps)(CardPageView);

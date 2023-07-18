@@ -1,5 +1,5 @@
 import { getFromPublic } from "../../_utils/getFromPublic";
-//космос, дождь, костер, оккеан, поездка в поезде, снег  
+
 const initState = {
     currentTheme: null,
     listTheme: [
@@ -93,5 +93,5 @@ export const cardSetReducer = (state = initState, action) => {
 
         default: 
             return state;
-    }
-}
+    };
+};
