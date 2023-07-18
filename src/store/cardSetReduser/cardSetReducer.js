@@ -75,11 +75,20 @@ export const cardSetReducer = (state = initState, action) => {
             }
 
         case 'UP_NEXT': 
-            
+            const {currentTheme, listTheme} = state; 
+            const {title} = currentTheme;
+            let currentIndexTheme = listTheme.findIndex((item) => item.title === title);
+            let nextTheme;
+            if (currentIndexTheme >= listTheme.length - 1) {
+                nextTheme = listTheme[0];
+            } else {
+                currentIndexTheme++
+                nextTheme = listTheme[currentIndexTheme];
+            }
 
             return {
                 ...state,
-                // currentTheme: nextTheme
+                currentTheme: nextTheme
             }; 
 
         default: 
