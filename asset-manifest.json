@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/card-views/static/css/main.5525cebb.css",
-    "main.js": "/card-views/static/js/main.269383b0.js",
-    "static/media/mountains-bcg.png": "/card-views/static/media/mountains-bcg.d449462a8cdbbddf4bd0.png",
+    "main.css": "/card-views/static/css/main.d7867699.css",
+    "main.js": "/card-views/static/js/main.b8735854.js",
+    "static/media/main-bcg.jpg": "/card-views/static/media/main-bcg.6da4761e4266a3019bbb.jpg",
     "index.html": "/card-views/index.html",
-    "main.5525cebb.css.map": "/card-views/static/css/main.5525cebb.css.map",
-    "main.269383b0.js.map": "/card-views/static/js/main.269383b0.js.map"
+    "main.d7867699.css.map": "/card-views/static/css/main.d7867699.css.map",
+    "main.b8735854.js.map": "/card-views/static/js/main.b8735854.js.map"
   },
   "entrypoints": [
-    "static/css/main.5525cebb.css",
-    "static/js/main.269383b0.js"
+    "static/css/main.d7867699.css",
+    "static/js/main.b8735854.js"
   ]
 }
