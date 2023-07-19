@@ -1,4 +1,4 @@
-import { CardPreviewPage } from './components/card-list/CardPreviewPage';
+import { CardPreviewPage } from "./pages/main-page/CardPreviewPage";
 
 function Root() {
   return (

@@ -5,8 +5,8 @@ const initState = {
     listTheme: [
         {
             title: 'Space journey',
-            previeText: 'Mав велику голову з гострими ...',
-            text: 'Travel back 66 million years to when majestic dinosaurs and extraordinary creatures roamed the lands, seas, and skies.',
+            previeText: 'Deep space music from Interstellar',
+            text: 'Travel the infinity of space to the soundtrack of Hans Zimmer from the movie Interstellar.',
             description: 'Documentary · 1 hr 3 min',
             previeImage: getFromPublic('/assets/images/space/space-preview.jpg'),
             bcgImage: getFromPublic('/assets/images/space/space.jpg'),
@@ -15,8 +15,8 @@ const initState = {
         },
         {
             title: 'It`s raining outside',
-            previeText: 'Mав велику голову з гострими ...',
-            text: 'Travel back 66 million years to when majestic dinosaurs and extraordinary creatures roamed the lands, seas, and skies.',
+            previeText: 'Sounds of raindrops with thunder',
+            text: 'The meaning of life is not to wait for the storm to end, but to learn to dance in the rain.',
             description: 'Documentary · 1 hr 3 min',
             previeImage: getFromPublic('/assets/images/rain/rain-preview.jpg'),
             bcgImage: getFromPublic('/assets/images/rain/rain.jpg'),
@@ -25,8 +25,8 @@ const initState = {
         },
         {
             title: 'Burning fire',
-            previeText: 'Mав велику голову з гострими ...',
-            text: 'Travel back 66 million years to when majestic dinosaurs and extraordinary creatures roamed the lands, seas, and skies.',
+            previeText: 'Sounds and crackling of a fire in nature',
+            text: 'The sounds and crackling of a fire in nature, just imagine that you are far from the city.',
             description: 'Documentary · 1 hr 3 min',
             previeImage: getFromPublic('/assets/images/fire/fire-preview.jpg'),
             bcgImage: getFromPublic('/assets/images/fire/fire.jpg'),
@@ -35,8 +35,8 @@ const initState = {
         },
         {
             title: 'Ocean',
-            previeText: 'Mав велику голову з гострими ...',
-            text: 'Travel back 66 million years to when majestic dinosaurs and extraordinary creatures roamed the lands, seas, and skies.',
+            previeText: 'The sound of the waves on the ocean',
+            text: 'Because every person is an ocean, and it is stupid to sincerely consider yourself a puddle all your life, even if it is the deepest and most non-drying one in the microdistrict.',
             description: 'Documentary · 1 hr 3 min',
             previeImage: getFromPublic('/assets/images/ocean/ocean-preview.jpg'),
             bcgImage: getFromPublic('/assets/images/ocean/ocean.jpg'),
@@ -45,8 +45,8 @@ const initState = {
         },
         {
             title: 'Night nature',
-            previeText: 'Mав велику голову з гострими ...',
-            text: 'Travel back 66 million years to when majestic dinosaurs and extraordinary creatures roamed the lands, seas, and skies.',
+            previeText: 'Sounds of the nightlife of nature',
+            text: 'However, such is the peculiarity of the starry sky: everyone who looks at it has a sweet heart aching. Perhaps we really come from somewhere there?',
             description: 'Documentary · 1 hr 3 min',
             previeImage: getFromPublic('/assets/images/evening/evening-preview.jpg'),
             bcgImage: getFromPublic('/assets/images/evening/evening.jpg'),
@@ -55,8 +55,8 @@ const initState = {
         },
         {
             title: 'Winter',
-            previeText: 'Mав велику голову з гострими ...',
-            text: 'Travel back 66 million years to when majestic dinosaurs and extraordinary creatures roamed the lands, seas, and skies.',
+            previeText: 'Sounds of snow and blizzards outside the window',
+            text: 'Winter awakens the appetite. As long as there is snow on the streets, chocolate cake is the best medicine.',
             description: 'Documentary · 1 hr 3 min',
             previeImage: getFromPublic('/assets/images/snow/snow-preview.jpg'),
             bcgImage: getFromPublic('/assets/images/snow/snow.jpg'),

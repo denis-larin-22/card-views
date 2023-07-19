@@ -1,9 +1,9 @@
-import { getFromPublic } from '../_utils/getFromPublic';
+import { getFromPublic } from '../../_utils/getFromPublic';
 import { useRef, useState } from 'react';
 import ReactPlayer from 'react-player';
 import { connect } from 'react-redux';
-import { Card } from './Card';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Card } from './Card';
 
 const CardPageView = ({ currentTheme, listThemes }) => {
     //Icons
@@ -11,10 +11,6 @@ const CardPageView = ({ currentTheme, listThemes }) => {
     //Values from current state
     const { bcgImage, bcgVideo, audio, ...cardTheme } = currentTheme;
     //Animation styles for card content
-    const opacity = {
-        visible: 'opacity: 1',
-        hidden: 'opacity: 0'
-    }
     const [isVisibleCard, setIsVisibleCard] = useState(true)
     const [isPlayingBcg, setIsPlayingBcg] = useState(false);
     const [isPlayingAudio, setIsPlayingAudio] = useState(false);
@@ -28,9 +24,9 @@ const CardPageView = ({ currentTheme, listThemes }) => {
     return (
         <motion.div
             className="relative w-screen h-screen overflow-hidden bg-black z-[10] origin-top-left"
-            initial={opacity.hidden}
-            animate={opacity.visible}
-            exit={opacity.hidden}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
         >
             <audio ref={audioRef} loop src={audio} className=''></audio>
@@ -48,13 +44,13 @@ const CardPageView = ({ currentTheme, listThemes }) => {
                     src={bcgImage}
                     alt="default-background"
                     className="w-[100%] h-[100%] absolute top-0 left-0 z-[-1] object-cover"
-                    initial={opacity.hidden}
-                    animate={opacity.visible}
-                    exit={opacity.hidden}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
                 />}
             </AnimatePresence>
 
-            <main className="container flex items-center justify-center content">
+            <main className="container absolute top-2/4 left-1/2 translate-x-[-50%] translate-y-[-50%] z-50 flex items-center justify-center">
                 <AnimatePresence>
                     {isVisibleCard && <motion.div
                         className="border-[2px] border-white-0.2 rounded-[32px] backdrop-blur-xl"

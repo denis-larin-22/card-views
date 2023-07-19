@@ -1,10 +1,14 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'main-bcg': "url('../../public/assets/images/main-bcg.jpg')",
+      },
       colors: {
         'white-0.1': 'rgba(255, 255, 255, 0.1)',
         'white-0.2': 'rgba(255, 255, 255, 0.2)',
@@ -14,6 +18,7 @@ module.exports = {
         'transition-slow':  'transition: ease 1s'
       },
       screens: {
+        exsm: '576px',
         md: '940px'
       },
     },
